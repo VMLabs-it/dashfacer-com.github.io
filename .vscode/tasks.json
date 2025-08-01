@@ -12,7 +12,21 @@
 			],
 			"group": "build",
 			"isBackground": true,
-			"problemMatcher": []
+			"problemMatcher": {
+				"pattern": [
+					{
+						"regexp": ".*Server running.*",
+						"file": 1,
+						"location": 2,
+						"message": 0
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": ".*",
+					"endsPattern": "Server running"
+				}
+			}
 		}
 	]
 }
