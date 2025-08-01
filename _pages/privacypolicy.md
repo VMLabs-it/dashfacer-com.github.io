@@ -150,8 +150,4 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, You can contact us:
-
-- By email: support@dashfacer.com
-
-- By visiting this page on our website: [https://dashfacer.com](https://dashfacer.com)
+If you have any questions about this Privacy Policy, You can contact us by email.
