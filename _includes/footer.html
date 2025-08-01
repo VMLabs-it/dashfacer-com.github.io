@@ -67,14 +67,31 @@
 			</a>
 		{% endif %}
 
-		{% if site.email_address %}
-			<a href="mailto:{{ site.email_address }}">
+	{% if site.email_address %}
+		{% assign parts = site.email_address | split: "@" %}
+		<span class="email-container" data-user="{{ parts[0] }}" data-domain="{{ parts[1] }}">
+			<!-- JS will inject the link+icon here -->
+		</span>
+		<script>
+			(function() {
+			const container = document.currentScript.previousElementSibling;
+			const user = container.getAttribute("data-user");
+			const domain = container.getAttribute("data-domain");
+			const email = user + "@" + domain;
+
+			const a = document.createElement("a");
+			a.href = "mailto:" + email;
+			a.setAttribute("aria-label", email);
+			a.innerHTML = `
 				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
 				</span>
-			</a>
-		{% endif %}
+			`;
+			container.appendChild(a);
+			})();
+		</script>
+	{% endif %}
 
 	</div>
 	<div class="footerLinks">

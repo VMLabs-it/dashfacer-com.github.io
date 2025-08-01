@@ -381,17 +381,39 @@ nav > ul li a:active {
 .iphonePreview {
 	grid-area: p;
 	background-image: url($device-color);
-	background-size: 400px auto;
+	background-size: 390px auto;
 	background-repeat: no-repeat;
 	margin-top: 68px;
 }
 
 .iphoneScreen {
-	width: 349px;
+	width: 360px;
+	height: 778px;
 	-webkit-clip-path: url(#screenMask);
 	clip-path: url(#screenMask);
-	margin-left: 26px;
-	margin-top: 23px;
+	margin-left: 15px;
+	margin-top: 12px;
+}
+
+.iphoneLandscapePreview {
+	grid-area: p;
+	background-image: url($device-color);
+	background-size: 390px auto;
+	background-repeat: no-repeat;
+	margin-top: 68px;
+	transform: rotate(90deg) translate(250px, -400px);
+    transform-origin: center;
+}
+
+.iphoneLandscapeScreen {
+	width: 778px;
+	height: 360px;
+	-webkit-clip-path: url(#screenMaskLandscape);
+	clip-path: url(#screenMaskLandscape);
+	margin-left: 15px;
+	margin-top: 12px;
+	transform: rotate(-90deg) translate(-209px, -209px);
+    transform-origin: center;
 }
 
 .videoContainer {
@@ -411,13 +433,26 @@ nav > ul li a:active {
 @media only screen and (max-width: 1070px) {
 
 	.iphonePreview {
-		background-size: 370px auto;
+		background-size: 360px auto;
 	}
 
 	.iphoneScreen {
-		width: 322px;
-		margin-left: 24px;
-		margin-top: 22px;
+		width: 332px;
+		height: 718px;
+		margin-left: 14px;
+		margin-top: 11px;
+	}
+
+	.iphoneLandscapePreview {
+		background-size: 360px auto;
+		transform: rotate(90deg) translate(200px, -350px);
+	}
+
+	.iphoneLandscapeScreen {
+		width: 718px;
+		height: 332px;
+		margin-left: 30px;
+		margin-top: -5px;
 	}
 
 	.videoContainer {
@@ -446,12 +481,32 @@ nav > ul li a:active {
 	}
 
 	.iphoneScreen {
-		width: 226px;
-		height: 488px;
+		width: 240px;
+		height: 520px;
 		-webkit-clip-path: url(#screenMask);
 		clip-path: url(#screenMask);
 		margin: 0px;
-		margin-top: 17px;
+		margin-top: 8px;
+	}
+
+	.iphoneLandscapePreview {
+		display: flex;
+		background-size: 220px auto;
+		background-position: center 0;
+		margin-top: 47px;
+		justify-content: center;
+		padding-bottom: 75px;
+		transform: rotate(90deg) translate(140px, 75px);
+		transform-origin: center;
+	}
+
+	.iphoneLandscapeScreen {
+		width: 440px;
+		height: 204px;
+		-webkit-clip-path: url(#screenMaskLandscape);
+		clip-path: url(#screenMaskLandscape);
+		margin-left: 418px;
+		margin-top: -84px;
 	}
 
 	.videoContainer {
