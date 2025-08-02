@@ -553,16 +553,15 @@ nav > ul li a:active {
 		justify-content: center;
 		padding-bottom: 75px;
 		transform: rotate(90deg) translate(168px, 116px);
-		transform-origin: center;
 	}
 
 	.iphoneLandscapeScreen {
-		width: 358px;
-		height: 166px;
-		-webkit-clip-path: url(#screenMaskLandscape);
-		clip-path: url(#screenMaskLandscape);
-		margin-left: 418px;
-		margin-top: -107px;
+		width: 166px;
+		height: 360px;
+		-webkit-clip-path: url(#screenMask);
+		clip-path: url(#screenMask);
+		margin-left: 0px;
+		margin-top: 5px;
 	}
 }
 

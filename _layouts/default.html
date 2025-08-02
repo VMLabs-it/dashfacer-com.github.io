@@ -4,15 +4,18 @@
 {% include head.html %}
 
 <body>
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <clipPath id="screenMask" clipPathUnits="objectBoundingBox">
+                <rect x="0" y="0" width="1" height="1" rx="0.14" ry="0.06" />
+            </clipPath>
+        </defs>
+    </svg>
     <div class="imageWrapper">
             <div class="headerBackground">
                 <div class="container">
                     {% include header.html %}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" style="position: absolute;">
-                        <clipPath id="screenMask" clipPathUnits="objectBoundingBox">
-                            <rect x="0" y="0" width="1" height="1" rx="0.14" ry="0.06" />
-                        </clipPath>
-                    </svg>
+
                     <div class="iphonePreview">
 
                         <div class="videoContainer hidden">
