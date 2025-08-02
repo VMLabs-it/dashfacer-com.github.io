@@ -13,8 +13,11 @@ presskit_download_link                    :                                     
 app_icon                                  : assets/appicon.png                        # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : DashFacer                                 # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Your Racing Companion
+app_headline                              : Experience real-time performance insights while you race.
+app_headline_gradient                     : while you race.
+app_description                           : Get all real-time lap data, sector deltas, and voice feedback — right on your wheel.
 
+enable_app_price                          : false                                      # Set to true to show app price in the header.
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
 google_analytics_id                       : G-QQVZEPDS5B                              # Enter your Google Analytics ID to enable tracking. If you don't have one, leave empty.
 
@@ -46,7 +49,7 @@ features                                  :
     fontawesome_icon_name                 : plus-minus
 
   - title                                 : Multi-Class Position
-    description                           : See your real-time ranking not only overall, but also within your class. Whether you’re racing amateurs, or pro drivers, you always know your position against the right competitors.
+    description                           : See your real-time ranking not only overall, but also within your class. Always know your position against the right competitors.
     fontawesome_icon_name                 : list-ol    
 
   - title                                 : Voice Feedback
@@ -70,7 +73,7 @@ topbar_title_color                        : "#ffffff"
 
 cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
 cover_overlay_color                       : "#000000"
-cover_overlay_transparency                : 0.05
+cover_overlay_transparency                : 0.4
 
 device_color                              : iPhone_16_Pro_Max                         # Set to: blue, black, yellow, coral or white.
 
@@ -80,6 +83,7 @@ link_color                                : "#007AFF"
 
 app_title_color                           : "#ffffff"
 app_price_color                           : "#ffffff"
+app_headline_color                        : "#ffffff"
 app_description_color                     : "#ffffff"
 
 feature_title_color                       : "#000000"

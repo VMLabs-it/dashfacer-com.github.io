@@ -8,12 +8,12 @@
             <div class="headerBackground">
                 <div class="container">
                     {% include header.html %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" style="position: absolute;">
+                        <clipPath id="screenMask" clipPathUnits="objectBoundingBox">
+                            <rect x="0" y="0" width="1" height="1" rx="0.14" ry="0.06" />
+                        </clipPath>
+                    </svg>
                     <div class="iphonePreview">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" style="position: absolute;">
-                            <clipPath id="screenMask" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1" rx="0.14" ry="0.06" />
-                            </clipPath>
-                        </svg>
 
                         <div class="videoContainer hidden">
                             <video class="screenvideo" autoplay="autoplay" controls="controls">
@@ -26,12 +26,6 @@
 
                     </div>
                     <div class="iphoneLandscapePreview hidden">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" style="position: absolute;">
-                            <clipPath id="screenMaskLandscape" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1" rx="0.06" ry="0.14" />
-                            </clipPath>
-                        </svg>
 
                         <img class="iphoneLandscapeScreen hidden" src="" alt="">
 
@@ -53,10 +47,15 @@
                             <h1 class="appName">
                                 {{ site.app_name }}
                             </h1>
+                            {% if site.enable_app_price %}
                             <h2 class="appPrice">
                                 {{ site.app_price }}
                             </h2>
+                            {% endif %}
                         </div>
+                        <h1 class="appHeadline">
+                            {{ site.app_headline | replace: site.app_headline_gradient, '<span class="appHeadlineGradient">' | append: site.app_headline_gradient | append: '</span>' }}
+                        </h1>
                         <div class="appDescriptionContainer">
                             <p class ="appDescription">
                                 {{ site.app_description }}

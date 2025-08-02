@@ -43,7 +43,7 @@
 	grid-column-gap: 30px;
 	grid-template-areas: 
 		"h h h h h h h h h h h h"
-		"p p p p p i i i i i i i"
+		"i i i i i i i o p p p p"
 		"c c c c c c c c c c c c"
 		"f f f f f f f f f f f f";
 }
@@ -249,6 +249,23 @@ nav > ul li a:active {
 	align-content: flex-start;
 }
 
+.appIconLarge {
+	width: 120px;
+	height: 120px;
+	-webkit-clip-path: url(#shape120);
+	clip-path: url(#shape120);
+	display: none;
+}
+
+.appNamePriceContainer {
+	display: none;
+	flex: 0 1 auto;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	margin-left: 30px;
+}
+
 @media only screen and (max-width: 992px) {
 
 	.appInfo {
@@ -256,6 +273,17 @@ nav > ul li a:active {
 		justify-content: center;
 	}
 
+	.appIconLarge {
+		display: flex;
+	}
+
+	.appNamePriceContainer {
+		display: flex;
+	}
+
+	.appHeadline {
+		padding-top: 44px;
+	}
 } 
 
 .appIconShadow {
@@ -263,20 +291,18 @@ nav > ul li a:active {
 	filter: $drop-shadow;
 }
 
-.appIconLarge {
-	width: 120px;
-	height: 120px;
-	-webkit-clip-path: url(#shape120);
-	clip-path: url(#shape120);
+.appHeadline {
+	font-size: 5.0rem;
+	font-weight: 400;
+	width: 100%;
+	color: $app-headline-color;
 }
 
-.appNamePriceContainer {
-	display: flex;
-	flex: 0 1 auto;
-	flex-direction: column;
-	align-items: start;
-	justify-content: center;
-	margin-left: 30px;
+.appHeadlineGradient {
+	background: linear-gradient(90deg, #FF2D55, #007AFF);
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	color: transparent;
 }
 
 .appName {
@@ -311,8 +337,8 @@ nav > ul li a:active {
 } 
 
 .appDescriptionContainer {
-	font-size: 2.5rem;
-	font-weight: normal;
+	font-size: 2.1rem;
+	font-weight: regular;
 	width: 100%;
 	align-items: flex-start;
 	margin-top: 45px;
@@ -325,6 +351,10 @@ nav > ul li a:active {
 }
 
 @media only screen and (max-width: 992px) {
+
+	.appHeadline {
+		text-align: center;
+	}
 
 	.appDescription {
 		text-align: center;
@@ -380,39 +410,33 @@ nav > ul li a:active {
 .iphonePreview {
 	grid-area: p;
 	background-image: url($device-color);
-	background-size: 390px auto;
+	background-size: 320px auto;
 	background-repeat: no-repeat;
 	margin-top: 68px;
 }
 
 .iphoneScreen {
-	width: 360px;
-	height: 778px;
+	width: 296px;
 	-webkit-clip-path: url(#screenMask);
 	clip-path: url(#screenMask);
-	margin-left: 15px;
-	margin-top: 12px;
+	margin-left: 12px;
+	margin-top: 10px;
 }
 
 .iphoneLandscapePreview {
 	grid-area: p;
 	background-image: url($device-color);
-	background-size: 390px auto;
+	background-size: 280px auto;
 	background-repeat: no-repeat;
-	margin-top: 68px;
-	transform: rotate(90deg) translate(250px, -400px);
-    transform-origin: center;
+	transform: rotate(90deg) translate(216px, 338px);
 }
 
 .iphoneLandscapeScreen {
-	width: 778px;
-	height: 360px;
-	-webkit-clip-path: url(#screenMaskLandscape);
-	clip-path: url(#screenMaskLandscape);
-	margin-left: 15px;
-	margin-top: 12px;
-	transform: rotate(-90deg) translate(-209px, -209px);
-    transform-origin: center;
+	width: 258px;
+	-webkit-clip-path: url(#screenMask);
+	clip-path: url(#screenMask);
+	margin-left: 11px;
+	margin-top: 8px;
 }
 
 .videoContainer {
@@ -432,26 +456,23 @@ nav > ul li a:active {
 @media only screen and (max-width: 1070px) {
 
 	.iphonePreview {
-		background-size: 360px auto;
+		background-size: 286px auto;
 	}
 
 	.iphoneScreen {
-		width: 332px;
-		height: 718px;
-		margin-left: 14px;
-		margin-top: 11px;
+		width: 264px;
+		margin-left: 11px;
+		margin-top: 8px;
 	}
 
 	.iphoneLandscapePreview {
-		background-size: 360px auto;
-		transform: rotate(90deg) translate(200px, -350px);
+		background-size: 248px auto;
 	}
 
 	.iphoneLandscapeScreen {
-		width: 718px;
-		height: 332px;
-		margin-left: 30px;
-		margin-top: -5px;
+		width: 229px;
+		margin-left: 9px;
+		margin-top: 7px;
 	}
 
 	.videoContainer {
@@ -500,12 +521,12 @@ nav > ul li a:active {
 	}
 
 	.iphoneLandscapeScreen {
-		width: 440px;
-		height: 204px;
-		-webkit-clip-path: url(#screenMaskLandscape);
-		clip-path: url(#screenMaskLandscape);
-		margin-left: 418px;
-		margin-top: -84px;
+		width: 204px;
+		height: 438px;
+		-webkit-clip-path: url(#screenMask);
+		clip-path: url(#screenMask);
+		margin-left: 0px;
+		margin-top: 7px;
 	}
 
 	.videoContainer {
@@ -556,7 +577,6 @@ nav > ul li a:active {
 	justify-content: flex-start;
 	flex-grow: 1;
 	flex-wrap: wrap;
-	margin-top: 93px;
 }
 
 .feature {
