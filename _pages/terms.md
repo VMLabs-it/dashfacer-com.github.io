@@ -2,6 +2,7 @@
 layout: page
 title: Terms of Service
 include_in_header: false
+include_in_footer: true
 ---
 
 # LICENSED APPLICATION END USER LICENSE AGREEMENT
