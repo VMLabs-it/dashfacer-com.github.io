@@ -15,6 +15,12 @@
 
 }
 
+@media only screen and (max-width: 390px) {
+	.imageWrapper {					// Sets the background image in the header area
+		height: 790px;
+	}
+}
+
 .headerBackground {
 	height: 115px;
 	background-color: rgba($header-color, $header-transparency);
