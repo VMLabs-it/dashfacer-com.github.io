@@ -23,7 +23,7 @@ include_in_footer: false
 
 <p style="text-align: center;">
     Redirecting to the App Store.
-    </br>
+    <br>
     If you’re not redirected automatically, 
     <a id="fallback" href="https://apps.apple.com/app/id{{ site.ios_app_id }}">
         click here
