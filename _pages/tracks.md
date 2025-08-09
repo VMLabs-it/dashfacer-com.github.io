@@ -9,10 +9,18 @@ tracks:
     city: Brasilia
     country: Brazil
     slug: kartpoint
+  - name: Galaxy Motorsports Karting
+    city: Athens
+    country: Greece
+    slug: megarakartingcircuit
   - name: Kartodromo Città di Messina
     city: Messina
     country: Italy
     slug: kartodromomessina
+  - name: Pista del Corallo
+    city: Sassari
+    country: Italy
+    slug: pistadelcorallo
 ---
 
 # Licensed Tracks
