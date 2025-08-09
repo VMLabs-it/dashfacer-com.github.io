@@ -21,6 +21,10 @@ tracks:
     city: Sassari
     country: Italy
     slug: pistadelcorallo
+  - name: Karting Sevilla
+    city: Sevilla
+    country: Spain
+    slug: kartingsevilla
 ---
 
 # Licensed Tracks
