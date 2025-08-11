@@ -1,107 +1,116 @@
 <footer>
+	<div class="footerLinks">
+		{% for page in site.pages %}
+		{% if page.include_in_footer == true %}
+		<a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
+		{% endif %}
+		{% endfor %}
+		{% if site.presskit_download_link %}
+		<a href="{{ site.presskit_download_link }}">Press Kit</a>
+		{% endif %}
+	</div>
 	{% if site.your_name %}
-	<p class="footerText">Made by {% if site.your_link %}<a href="{{ site.your_link }}">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
+	<p class="footerText">Made by {% if site.your_link %}<a href="{{ site.your_link }}">{% endif %}{{ site.your_name
+			}}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
 	{% endif %}
 	<div class="footerIcons">
 
 		{% if site.linkedin_username %}
-			<a href="https://linkedin.com/in/{{ site.linkedin_username }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-linkedin fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-linkedin fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.linkedin_company %}
-			<a href="https://linkedin.com/company/{{ site.linkedin_company }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-linkedin fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://linkedin.com/company/{{ site.linkedin_company }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-linkedin fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.facebook_username %}
-			<a href="https://facebook.com/{{ site.facebook_username }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-facebook fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://facebook.com/{{ site.facebook_username }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-facebook fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.x_username %}
-			<a href="https://x.com/{{ site.x_username }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-x-twitter fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://x.com/{{ site.x_username }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-x-twitter fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.instagram_username %}
-			<a href="https://instagram.com/{{ site.instagram_username }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-instagram fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://instagram.com/{{ site.instagram_username }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-instagram fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.mastodon_link %}
-			<a rel="me" href="{{ site.mastodon_link }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-mastodon fa-stack-1x"></i>
-				</span>
-			</a>
+		<a rel="me" href="{{ site.mastodon_link }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-mastodon fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
 		{% if site.github_username %}
-			<a href="https://github.com/{{ site.github_username }}">
-				<span class="fa-stack fa-1x">
-					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
-					<i class="socialIconTop fab fa-github fa-stack-1x"></i>
-				</span>
-			</a>
+		<a href="https://github.com/{{ site.github_username }}">
+			<span class="fa-stack fa-1x">
+				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+				<i class="socialIconTop fab fa-github fa-stack-1x"></i>
+			</span>
+		</a>
 		{% endif %}
 
-	{% if site.email_address %}
+		{% if site.email_address %}
 		{% assign parts = site.email_address | split: "@" %}
 		<span class="email-container" data-user="{{ parts[0] }}" data-domain="{{ parts[1] }}">
 			<!-- JS will inject the link+icon here -->
 		</span>
 		<script>
-			(function() {
-			const container = document.currentScript.previousElementSibling;
-			const user = container.getAttribute("data-user");
-			const domain = container.getAttribute("data-domain");
-			const email = user + "@" + domain;
+			(function () {
+				const container = document.currentScript.previousElementSibling
+				const user = container.getAttribute("data-user")
+				const domain = container.getAttribute("data-domain")
+				const email = user + "@" + domain
 
-			const a = document.createElement("a");
-			a.href = "mailto:" + email;
-			a.setAttribute("aria-label", email);
-			a.innerHTML = `
+				const a = document.createElement("a")
+				a.href = "mailto:" + email
+				a.setAttribute("aria-label", email)
+				a.innerHTML = `
 				<span class="fa-stack fa-1x">
 				<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
 				<i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
 				</span>
-			`;
-			container.appendChild(a);
+			`
+				container.appendChild(a)
 			})();
 		</script>
-	{% endif %}
+		{% endif %}
 
 	</div>
-	<div class="footerLinks">
-		{% for page in site.pages %}
-			{% if page.include_in_footer == true %}
-			<a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
-			{% endif %}
-		{% endfor %}
-		{% if site.presskit_download_link %}
-			<a href="{{ site.presskit_download_link }}">Press Kit</a>
-		{% endif %}
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.getElementById("footerCopyrightYear").innerText = new Date().getFullYear()
+		});
+	</script>
+	<div class="footerCopyright">
+		Copyright © 2023-<span id="footerCopyrightYear"></span> {{ site.copyright_name }}. All Rights Reserved.
 	</div>
 </footer>

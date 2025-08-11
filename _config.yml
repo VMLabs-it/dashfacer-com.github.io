@@ -22,18 +22,19 @@ enable_smart_app_banner                   : true                                
 google_analytics_id                       : G-QQVZEPDS5B                              # Enter your Google Analytics ID to enable tracking. If you don't have one, leave empty.
 
 # Information About Yourself
-your_name                                 : Valerio Mazzeo                                
+your_name                                 :
 your_link                                 :                      
-your_city                                 : Italy                                
+your_city                                 :                                
 email_address                             : support@dashfacer.com
 linkedin_username                         :                                           
 linkedin_company                          :                                           
-facebook_username                         :                                           
+facebook_username                         : dashfacer                                           
 instagram_username                        :
-x_username                                : valeriomazzeo
-github_username                           : valeriomazzeo
+x_username                                :
+github_username                           :
 youtube_username                          :
 mastodon_link                             :
+copyright_name                            : Valerio Mazzeo
 
 
 
