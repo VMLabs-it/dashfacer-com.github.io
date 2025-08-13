@@ -13,6 +13,14 @@ tracks:
     city: Athens
     country: Greece
     slug: megarakartingcircuit
+  - name: SFi Karting Circuit
+    city: Athens
+    country: Greece
+    slug: speedforce2
+  - name: Speed Force
+    city: Athens
+    country: Greece
+    slug: speedforce
   - name: Kartodromo Città di Messina
     city: Messina
     country: Italy
