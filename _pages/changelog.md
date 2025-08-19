@@ -9,6 +9,18 @@ include_in_footer: true
 
 <br>
 
+### `🏎️ Live Session Indicator`
+
+# **Version 1.0.3**
+
+Added a live session indicator to quickly be able to validate the driver name.
+
+### `🐞 Bug Fixes`
+
+# **Version 1.0.2**
+
+Fixed various bugs to improve app stability and performance.
+
 ### `🏁 New Tracks Added`
 
 # **Version 1.0.1**
