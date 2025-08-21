@@ -9,6 +9,12 @@ include_in_footer: true
 
 <br>
 
+### `🔦 Flashlight Control`
+
+# **Version 1.0.4**
+
+Added a button to switch on/off the flashlight while scanning kart's QR code (only on available tracks).
+
 ### `🏎️ Live Session Indicator`
 
 # **Version 1.0.3**
