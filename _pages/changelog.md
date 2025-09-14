@@ -9,6 +9,12 @@ include_in_footer: true
 
 <br>
 
+### `🐞 Bug Fixes`
+
+# **Version 1.0.5**
+
+Fixed various bugs to improve app stability and performance.
+
 ### `🔦 Flashlight Control`
 
 # **Version 1.0.4**
