@@ -11,6 +11,12 @@ include_in_footer: true
 
 ### `🐞 Bug Fixes`
 
+# **Version 1.0.6**
+
+We update the app regularly to fix bugs, optimize performance and improve the experience.
+
+### `🐞 Bug Fixes`
+
 # **Version 1.0.5**
 
 Fixed various bugs to improve app stability and performance.
