@@ -11,6 +11,12 @@ include_in_footer: true
 
 ### `🐞 Bug Fixes`
 
+# **Version 1.0.7**
+
+Fixed a bug preventing multi-class position to display properly in certain cases.
+
+### `🐞 Bug Fixes`
+
 # **Version 1.0.6**
 
 We update the app regularly to fix bugs, optimize performance and improve the experience.
