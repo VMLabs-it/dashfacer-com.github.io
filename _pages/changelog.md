@@ -9,6 +9,18 @@ include_in_footer: true
 
 <br>
 
+### `👀 Voice Spotter`
+
+# **Version 1.0.9**
+
+Spotter now delivers voice‑based position and gap updates for the drivers on track, directly in front and behind you, with smart driving cues to help improve your race awareness.
+
+### `🐞 Bug Fixes`
+
+# **Version 1.0.8**
+
+We update the app regularly to fix bugs, optimize performance and improve the experience.
+
 ### `🐞 Bug Fixes`
 
 # **Version 1.0.7**
