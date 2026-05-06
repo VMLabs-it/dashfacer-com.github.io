@@ -9,6 +9,12 @@ include_in_footer: true
 
 <br>
 
+### `🛰️ Live Delta Time featuring built-in GPS and RaceBox`
+
+# **Version 1.3.0**
+
+Always know if you're ahead or behind your best lap — now powered by RaceBox for 25 Hz GPS precision. Connect any supported receiver and get real-time delta times that update dozens of times per second. No setup required: your best lap is locked automatically and improves as you go faster.
+
 ### `👀 Voice Spotter`
 
 # **Version 1.0.9**
