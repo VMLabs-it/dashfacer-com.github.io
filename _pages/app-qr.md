@@ -6,15 +6,16 @@ include_in_footer: false
 ---
 
 <script>
-    // Helper to get current URL's query string (preserves utm_* if present)
     const query = window.location.search;
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Your App Store link (replace ID)
-    const appStoreBase = 'https://apps.apple.com/app/id{{ site.ios_app_id }}';
+    const isAndroid = /android/i.test(ua);
 
-    const forwardParams = query; // or filter if needed
+    const appStoreUrl = 'https://apps.apple.com/app/id{{ site.ios_app_id }}' + query;
+    const playStoreBase = '{{ site.playstore_link }}';
+    const playStoreUrl = query ? playStoreBase + (playStoreBase.includes('?') ? '&' : '?') + query.slice(1) : playStoreBase;
 
-    const target = appStoreBase + forwardParams;
+    const target = isAndroid ? playStoreUrl : appStoreUrl;
 
     setTimeout(() => {
         window.location.href = target;
@@ -22,10 +23,10 @@ include_in_footer: false
 </script>
 
 <p style="text-align: center;">
-    Redirecting to the App Store.
+    Redirecting to the app store for your device.
     <br>
-    If you’re not redirected automatically, 
-    <a id="fallback" href="https://apps.apple.com/app/id{{ site.ios_app_id }}">
-        click here
-    </a>.
+    If you are not redirected automatically, download on
+    <a href="https://apps.apple.com/app/id{{ site.ios_app_id }}">App Store</a>
+    or
+    <a href="{{ site.playstore_link }}">Google Play</a>.
 </p>
