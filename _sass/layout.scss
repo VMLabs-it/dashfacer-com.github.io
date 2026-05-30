@@ -1,5 +1,5 @@
 .imageWrapper {					// Sets the background image in the header area
-	height: 714px;
+	min-height: 714px;
 	background: 
 		linear-gradient(
 		rgba($image-overlay-color, $image-overlay-transparency), 
@@ -15,9 +15,15 @@
 
 }
 
+@media only screen and (max-width: 992px) {
+	.imageWrapper {					// Keep localized hero copy inside the visual header area
+		min-height: 860px;
+	}
+}
+
 @media only screen and (max-width: 390px) {
 	.imageWrapper {					// Sets the background image in the header area
-		height: 790px;
+		min-height: 920px;
 	}
 }
 
@@ -45,7 +51,7 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 115px 876px auto auto;
+	grid-template-rows: 115px minmax(876px, auto) auto auto;
 	grid-column-gap: 30px;
 	grid-template-areas: 
 		"h h h h h h h h h h h h"
@@ -62,7 +68,7 @@
 @media only screen and (max-width: 768px) {
 
 	.container {					// Set up the container for the site content
-		grid-template-rows: 80px 811px auto auto;
+		grid-template-rows: 80px minmax(811px, auto) auto auto;
 	}
 }
 
@@ -298,7 +304,7 @@ nav > ul li a:active {
 }
 
 .appHeadline {
-	font-size: 5.0rem;
+	font-size: clamp(3.2rem, 5vw, 5.0rem);
 	font-weight: 400;
 	width: 100%;
 	color: $app-headline-color;
@@ -343,13 +349,22 @@ nav > ul li a:active {
 } 
 
 .appDescriptionContainer {
-	font-size: 2.1rem;
+	font-size: clamp(1.6rem, 2.1vw, 2.1rem);
 	font-weight: regular;
 	width: 100%;
 	align-items: flex-start;
 	margin-top: 45px;
 	flex: 0 1 auto;
 	line-height: 1.5;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.appDescriptionContainer {
+		margin-top: 32px;
+		line-height: 1.4;
+	}
+
 }
 
 .appDescription {
