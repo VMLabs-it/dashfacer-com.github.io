@@ -9,6 +9,12 @@ include_in_footer: true
 
 <br>
 
+### `📋 Sessions and Telemetry, Synced and Ready to Share`
+
+# **Version 1.5.4**
+
+Sessions are now automatically recorded, saved, and synced across all your devices. Capture telemetry using your device's built-in GPS or a RaceBox for greater precision. A new lap comparison tool in the telemetry analysis lets you instantly see where you're gaining or losing time — and with seamless session import and export, sharing data with friends and teammates has never been easier.
+
 ### `🛰️ Live Delta Time featuring built-in GPS and RaceBox`
 
 # **Version 1.3.0**
